@@ -9,5 +9,32 @@ In GCP console, upload using Cloud shell. </br>
 
 There is an auth_certificate that is recognized by Cloud IoT Core. 
 
+## BigQuery table schema
 
-
+```json
+[
+    {
+        "name": "data",
+        "type": "RECORD",
+        "mode": "REPEATED",
+        "fields": [
+            {
+                "name": "timestamp_ambient_pressure",
+                "type": "STRING"
+            },
+            {
+                "name": "ambient_pressure",
+                "type": "FLOAT"
+            },
+            {
+                "name": "timestamp_temperature",
+                "type": "STRING"
+            },
+            {
+                "name": "temperature",
+                "type": "FLOAT"
+            }
+        ]
+    }
+]
+```
