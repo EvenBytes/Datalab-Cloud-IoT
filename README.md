@@ -34,3 +34,14 @@
     }
 ]
 ```
+
+Desplegar Cloud Function
+
+```
+gcloud functions deploy write_to_bigquery 
+  --runtime python37 \
+  --trigger-http \
+  --entry-point write_to_bigquery \
+  --requirements requirements.txt \
+  --allow-unauthenticated
+```
