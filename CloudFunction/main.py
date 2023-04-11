@@ -2,6 +2,9 @@ from flask import escape
 from google.cloud import bigquery
 from datetime import datetime
 
+#gcloud functions deploy <nombre_de_la_funcion> --runtime python37 --trigger-http --region <region> --entry-point <nombre_de_la_funcion> --source <directorio_de_la_funcion> --requirements <archivo_requirements.txt>
+
+
 # Función que se ejecutará en la Cloud Function
 def write_to_bigquery(request):
     # Recupera los parámetros desde la solicitud HTTP
